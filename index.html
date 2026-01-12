@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Padmavati Milk Collection Centre - Pro</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Padmavati Milk Collection Centre</h1>
+    <p>Kada Karkhana - Milk Collection Dashboard</p>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>Add Milk Entry</h2>
+        <form id="milkForm">
+            <input type="text" id="farmerName" placeholder="Farmer Name" required>
+            <input type="number" id="milkQty" placeholder="Milk Quantity (Liters)" required step="0.01">
+            <input type="number" id="fat" placeholder="Fat (%)" required step="0.01">
+            <input type="number" id="snf" placeholder="SNF (%)" required step="0.01">
+            <button type="submit">Save Entry</button>
+        </form>
+
+        <h2>Milk Records</h2>
+        <table id="milkTable">
+            <thead>
+                <tr>
+                    <th>Farmer Name</th>
+                    <th>Milk (L)</th>
+                    <th>Fat (%)</th>
+                    <th>SNF (%)</th>
+                    <th>Amount (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Records will appear here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td id="totalMilk">0</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td id="totalAmount">0</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <button id="exportBtn">Export to Excel</button>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
